@@ -1,0 +1,27 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.column{
+  width: calc(100%/10);
+  padding: 2rem !important;
+}
+
+.pesca{
+  width: 200px;
+  margin: 0 auto;
+  font-size: 50px !important;
+}
+
+.header{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header p {
+  font-size: 80px;
+}
