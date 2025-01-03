@@ -16,8 +16,10 @@ function App() {
       setNumb(arrayToDraw[newN])
       newArr.push(arrayToDraw[newN])
       arrayToDraw.splice(newN, 1)
-    } else {
-      setNumb("NUMERI FINITI!")
+      console.log(arrayToDraw);
+      if (arrayToDraw.length === 0){
+        setNumb("NUMERI FINITI!")
+      } 
     }
     // console.log(arrayToDraw);
 
@@ -29,6 +31,8 @@ function App() {
     newArr = []
     arrayToDraw = [...numbers]
   }
+
+  
 
   return (
     <div className="container my-5">
