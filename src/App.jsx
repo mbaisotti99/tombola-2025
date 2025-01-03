@@ -16,7 +16,7 @@ function App() {
       setNumb(arrayToDraw[newN])
       newArr.push(arrayToDraw[newN])
       arrayToDraw.splice(newN, 1)
-      console.log(arrayToDraw);
+      // console.log(arrayToDraw);
       if (arrayToDraw.length === 0){
         setNumb("NUMERI FINITI!")
       } 
@@ -32,7 +32,7 @@ function App() {
     arrayToDraw = [...numbers]
   }
 
-  
+
 
   return (
     <div className="container my-5">
@@ -42,9 +42,9 @@ function App() {
         <p className="my-5">{numb}</p>
       </div>
       <ul className="list-group list-group-horizontal d-flex flex-wrap text-center">
-        {numbers.map((curN) => {
+        {numbers.map((curN, index) => {
           return (
-            <li className={`column list-group-item ${(newArr.includes(curN)) && "bg-warning"} flex-fill border  `}>{curN}</li>
+            <li key={index} className={`column list-group-item ${(newArr.includes(curN)) && "bg-warning"} flex-fill border  `}>{curN}</li>
           )
         })}
       </ul>
